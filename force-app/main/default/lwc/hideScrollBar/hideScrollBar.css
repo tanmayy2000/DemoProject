@@ -1,0 +1,10 @@
+.myclass {
+    overflow: hidden; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+::-webkit-scrollbar {
+     background:transparent;
+     width:0px;       
+}

@@ -1,0 +1,28 @@
+<template>    
+    <lightning-card >
+        <div style="position:relative;transform:translate(42%,-50%)">
+            <p style = "margin: 0 0 2rem 2rem; font-size: 1.4rem;font-family:'Times New Roman', Times, serif;font-weight:bolder">Personal Information</p>
+        </div>
+            <div class = "slds-grid slds-wrap">
+            <!-- Input for Client Details -->
+             <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="text" label="Name" value={Client_Detail__c.Name} onchange={handleChange}></lightning-input>
+            </div>
+    
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="phone" label="Phone" value={Client_Detail__c.Phone__c} onchange={handleChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="picklist" label="Gender" value={Client_Detail__c.Gender__c} onchange={handleChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="email" label="Email" value={Client_Detail__c.Email__c} onchange={handleChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_2-of-5" style="margin:3rem 0px 0px 80rem">
+                <lightning-button variant="brand" label="Next" title="Primary action with lighter look" onclick={pagehandler} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </div>   
+    </lightning-card>
+</template>

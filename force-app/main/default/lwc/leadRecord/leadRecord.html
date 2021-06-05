@@ -1,0 +1,34 @@
+<template>
+
+    <lightning-card>
+    <div class= " slds-text-align_center"></div>
+    <header>Lead Creation</header>
+    <hr style= "background-color: black; margin-left:20px; margin-right:20px">
+    
+        <div class=" slds-align_absolute-center">
+           
+    <lightning-record-edit-form object-api-name="Lead" >
+        
+            
+        <lightning-input-field field-name="Name"   required> </lightning-input-field>
+        <lightning-input-field field-name="MobilePhone" onsuccess={leadMobilePhoneSuccessHandler} required ></lightning-input-field>
+        <lightning-input-field field-name="NumberOfEmployees" ></lightning-input-field>
+        <lightning-input-field field-name="Company" ></lightning-input-field>
+        <lightning-input-field field-name="Rating"></lightning-input-field>
+   
+    
+    <lightning-avatar src="/bad/image/url.jpg" variant="circle" fallback-icon-name="standard:lead" alternative-text="Salesforce" class="slds-m-right_small"></lightning-avatar>
+                        <lightning-button class="slds-m-top_small" type="submit" label="Create new Lead" onclick ={createLead}></lightning-button>
+                        
+                    </lightning-record-edit-form>
+        </div>
+
+        <div slot="footer">
+            <p> @Copyright tanmay all rights reserved </p>
+    </div>
+    </lightning-card>
+
+    
+    
+    
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+    
+        <span> <h1 style="margin-left: 20px; font-family:Arial;font-weight: bold;">Account Record</h1>
+  
+          <lightning-accordion allow-multiple-sections-open={multiple}>
+              <template if:true={wrapperList.data}>
+                  <template for:each={wrapperList.data} for:item="wrapper">
+                      <lightning-accordion-section key={wrapper.Id}>
+                          <p> Contacts
+                          <lightning-datatable
+                          key-field="id"
+                          data={wrapper.conList}
+                          columns={columns}>
+                  </lightning-datatable>
+                  </p>
+                  <p> Cases
+                  <lightning-datatable
+                  key-field="id"
+                  data={wrapper.csList}
+                  columns={columns1}>
+          </lightning-datatable>
+          </p>
+                      </lightning-accordion-section>
+                  </template>
+              </template>
+          </lightning-accordion></span>
+  
+      </lightning-card>
+</template>

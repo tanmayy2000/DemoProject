@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+
+        <p>Parent Name</p>
+            <lightning-input value={parVal} size="large"></lightning-input>
+        
+        <c-task-child-component onchild={passToParent}></c-task-child-component>
+    </lightning-card>
+
+    <lightning-card>
+        <lightning-input onchange={parentHandleChange} label="Parent Name"></lightning-input>
+
+<div class="slds-card slds-box">
+        <c-task-child-component get-my-value={fieldValue}></c-task-child-component>
+    </div>
+    </lightning-card>
+    
+   
+</template>

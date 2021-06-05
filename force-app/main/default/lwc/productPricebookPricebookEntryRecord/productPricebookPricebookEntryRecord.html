@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <template if:true={showAcc1}>
+            <c-product-record onchildpage={nextpage} conedata={record1} onchildevent={handlechild}></c-product-record>
+        </template>
+        
+        <template if:true={showAcc2}>
+            <c-pricebook-record onchildeventone ={handlechild1} ctwodata={record2} onchildpageprev={prevpage} onchildpagetwo={nextpage} msg-from-child={record1}></c-pricebook-record>
+        </template>
+
+       
+       
+    </lightning-card>
+</template>

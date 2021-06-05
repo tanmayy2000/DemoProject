@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Related List - Contacts" icon-name="standard:contact">
+    <div class="slds-float_right button">
+        <lightning-button label="Update" variant="brand" title="Toggle content action" onclick={handlebuttonevent}></lightning-button>
+    </div>
+    <br/>
+    <br/>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+        <tr class="">
+        <th class="slds-size_3-of-10" scope="col">
+        <div class="slds-truncate" title="FirstName" >First Name</div>
+        </th>
+        <th class="slds-size_3-of-10" scope="col">
+        <div class="slds-truncate" title="LastName" >Last Name</div>
+        </th>
+        <th class="slds-size_3-of-10" scope="col">
+        <div class="slds-truncate" title="Title" >Title</div>
+        </th>
+        <th class="slds-size_3-of-10" scope="col">
+        <div class="slds-truncate" title="Email" >Email</div>
+        </th>
+        <th class="slds-size_1-of-10" scope="col">
+        <div class="slds-truncate" title="Phone" >Phone</div>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+        <template for:each={data} for:item="item" for:index="indexVar">
+        <tr key={item.Id} class="slds-hint-parent">
+        
+        <td class="slds-size_3-of-10" data-label="Prospecting">
+            <div title="Prospecting">
+            <lightning-input value={item.FirstName} name="input1" access-key={indexVar} onchange ={handleChange} target="_self"></lightning-input>
+            </div>
+        </td>
+        <td class="slds-size_3-of-10" data-label="Prospecting">
+            <div title="Prospecting">
+            <lightning-input value={item.LastName} name="input2" access-key={indexVar} onchange ={handleChange} target="_self"></lightning-input>
+            </div>
+        </td>
+        <td class="slds-size_3-of-10" data-label="Prospecting">
+            <div title="Prospecting">
+            <lightning-input value={item.Title} name="input3" access-key={indexVar} onchange ={handleChange} target="_self"></lightning-input>
+                </div>
+        </td>
+        <td class="slds-size_3-of-10" data-label="Prospecting">
+                    <div title="Prospecting">
+                    <lightning-input value={item.Email} name="input4" access-key={indexVar} onchange ={handleChange} target="_self">
+                    </lightning-input>
+                    </div>
+                    </td>
+                    <td class="slds-size_3-of-10" data-label="Prospecting">
+                        <div title="Prospecting">
+                        <lightning-input value={item.Phone} name="input5" access-key={indexVar} onchange ={handleChange}  target="_self">
+                        </lightning-input>
+                        </div>
+                        </td>
+        </tr>
+        </template>
+        </tbody>
+        </table>
+    </lightning-card>
+    </template>

@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Contact List">
+        <template if:true={contacts.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts.data}
+                columns={columns}
+            >
+           </lightning-datatable>
+        </template>
+        <div style="display:flow-root;">
+            <div style="float:right">
+                <lightning-combobox value={pageSize} onchange={handleChangePageSize} placeholder="Select page size"
+                    options={options}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <br>
+        <div class="slds-align_absolute-center">
+            <b><h2> {objectApiName} </h2></b>
+        </div>
+        <br>
+        <template if:true={columns}>
+            <lightning-datatable key-field="Id" data={data} columns={columns} sorted-by={sortedBy}
+                sorted-direction={sortedDirection} onsort={sortColumns}>
+            </lightning-datatable>
+
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}>
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    Page {page} of {totalPage}
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right"
+                        onclick={nextHandler}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </lightning-card>
+
+</template>

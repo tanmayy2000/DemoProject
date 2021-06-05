@@ -1,0 +1,5 @@
+.example{
+  position:relative;
+  --lwc-brandPrimary: rgb(218 35 54);
+  height: 80px;
+}

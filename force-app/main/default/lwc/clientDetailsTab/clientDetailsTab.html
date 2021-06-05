@@ -1,0 +1,22 @@
+<template>
+    
+        <div class="slds-box slds-box_small">
+            <p>
+        <lightning-tabset class="slds-size_1-of-4 slds-is-active" variant="scoped" active-tab-value={activeTab} >        
+        <lightning-tab label="Client Personal Information" value="1" onactive={handleActive}>      
+            <c-client-detailsone onpersonalinfopage={nextpage} conedata={record1} onchildevent={handlechild}></c-client-detailsone>
+        </lightning-tab>
+        <lightning-tab label="Client Address" value="2" onactive={handleActive}>      
+            <c-client-detailstwo onchildeventone ={handlechild1} ctwodata={record2} onclientpreviouspage={prevpage} onclientaddressinfopage={nextpage} msg-from-child={record1}></c-client-detailstwo>
+        </lightning-tab>
+        <lightning-tab label="Bill Details" value="3" onactive={handleActive}>
+            <c-client-bill-details onchildeventtwo={handlechild2} onbilltoclientaddresspage={prevpage} oncai={nextpage} cthreedata ={record3} msgfromchildtwo={record2}></c-client-bill-details>
+        </lightning-tab>
+        <lightning-tab label="Preview" value="4" onactive={handleActive}>
+            <c-client-details-preview></c-client-details-preview>
+        </lightning-tab>
+    </lightning-tabset>
+    </p>
+  </div>
+
+</template>

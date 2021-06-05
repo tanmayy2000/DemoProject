@@ -1,0 +1,25 @@
+<template>
+    <template if:true={errors}>
+        <p>{errors}</p>
+    </template>
+    <lightning-card>
+        <header>Client Details</header>
+        <template if:true={getdetails.data}>
+        <lightning-datatable
+            key-field="Id"
+            data={getdetails.data}
+            columns={columns}>
+        </lightning-datatable>
+    </template>
+    </lightning-card>
+    <lightning-card>
+        <header>Bill Details</header>
+        <template if:true={getbilldetails.data}>
+        <lightning-datatable
+            key-field="Id"
+            data={getbilldetails.data}
+            columns={columns1}>
+        </lightning-datatable>
+    </template>
+    </lightning-card>
+</template>

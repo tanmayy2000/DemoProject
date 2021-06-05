@@ -1,0 +1,57 @@
+<template>
+  
+    <lightning-card>
+            
+
+            <p style="text-align: center; ">Create Account</p>
+            <hr style= "background-color: black; margin-left:20px; margin-right:20px">
+
+        
+            
+            <div>
+            <lightning-layout>
+                <lightning-layout-item size ="4" padding="around-small">
+                    <lightning-input type="text" label="Name" value={accountRecord.Name} onchange={handleNameChange} required></lightning-input>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="4" padding="around-small">
+                    <lightning-input type="tel" label="Phone" value={accountRecord.Phone} onchange={handlePhoneChange} required></lightning-input>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="number" label="Fax" value={accountRecord.Fax} onchange={handleFaxChange} required></lightning-input>
+                    </lightning-layout-item>
+                
+            </lightning-layout> 
+                <lightning-layout>
+
+                   
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="number" label="AnnualRevenue" value={accountRecord.AnnualRevenue} onchange={handleAnnualRevenueChange} ></lightning-input>
+                    </lightning-layout-item>
+                
+                
+
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="text" label="Rating" value={accountRecord.Rating} onchange={handleRatingChange} ></lightning-input>
+                    </lightning-layout-item>
+    
+                    <lightning-layout-item size="4" padding="around-small">
+                        <lightning-input type="number" label="Employees" value={accountRecord.NumberOfEmployees} onchange={handleNumberOfEmployeesChange} ></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item size="12" padding="around-small">
+                    <button class="slds-button slds-button_success slds-float_right" onclick ={handleSaveAccount}>Save</button>
+                </lightning-layout-item>
+                </lightning-layout>
+                
+            </div>
+            <footer>
+                <p>Last Account Created: {lastAccountid}</p>
+                </footer>
+    
+    </lightning-card>
+    
+    </template>

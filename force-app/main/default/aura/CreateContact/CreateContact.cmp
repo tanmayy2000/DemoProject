@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+            <aura:attribute name="fields" type="String[]" default="['FirstName','LastName','Email']" />
+            <aura:attribute name="recordId" type="String"/>
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+
+            <lightning:recordForm
+                    objectApiName="Contact"
+                    fields="{!v.fields}"
+                    onsuccess="{!c.handleSuccess}" />
+</aura:component>

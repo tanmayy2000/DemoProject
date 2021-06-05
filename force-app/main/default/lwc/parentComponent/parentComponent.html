@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <template if:true={showAcc1}>
+            <c-child-component1 onchildpage={nextpage} conedata={record1} onchildevent={handlechild}></c-child-component1>
+        </template>
+        
+        <template if:true={showAcc2}>
+            <c-child-component2 onchildeventone ={handlechild1} ctwodata={record2} onchildpageprev={prevpage} onchildpagetwo={nextpage} msg-from-child={record1}></c-child-component2>
+        </template>
+
+        <template if:true={showAcc3}>
+            <c-child-component3 onchildeventtwo={handlechild2} onchildpageprevone={prevpage} cthreedata ={record3} msgfromchildtwo={record2}></c-child-component3>
+        </template>
+       
+    </lightning-card>
+</template>

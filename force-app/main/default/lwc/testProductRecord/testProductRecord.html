@@ -1,0 +1,78 @@
+<template>
+    <lightning-card>
+    <lightning-tabset>
+        <lightning-tab label="Product">
+            <lightning-record-edit-form object-api-name="Product2" onsuccess={producthandleSuccess}>
+                <lightning-input-field field-name="Name">
+                </lightning-input-field>
+                <lightning-input-field field-name="Description">
+                </lightning-input-field>
+                <lightning-input-field field-name="IsActive">
+                </lightning-input-field>
+                    <lightning-button
+                        variant="brand"
+                        class="slds-align_absolute-center"
+                        type="submit"
+                        label="Create Product"
+                        onclick ={producthandleClick}>
+                    </lightning-button>
+                    
+            </lightning-record-edit-form>
+        </lightning-tab>
+        <lightning-tab label="Standard Pricebook">
+            <lightning-record-edit-form object-api-name="PricebookEntry">
+                <lightning-input-field field-name="Product2Id" value={prodId}>
+                </lightning-input-field>
+                <lightning-input-field field-name="Pricebook2Id" value={standardpricebookId.data}>
+                </lightning-input-field>
+                <lightning-input-field field-name="UnitPrice">
+                </lightning-input-field>
+                <lightning-input-field field-name="IsActive">
+                </lightning-input-field>
+                    <lightning-button
+                        variant="brand"
+                        class="slds-align_absolute-center"
+                        type="submit"
+                        label="Create Standard Price Book"
+                        onclick ={standardpricebookhandleClick}>
+                    </lightning-button>
+                    
+            </lightning-record-edit-form>
+        </lightning-tab>
+        <lightning-tab label="Pricebook">
+            <lightning-record-edit-form object-api-name="Pricebook2" onsuccess={pricebookhandleSuccess}>
+                <lightning-input-field field-name="Name">
+                </lightning-input-field>
+                <lightning-input-field field-name="Description">
+                </lightning-input-field>
+                <lightning-input-field field-name="IsActive">
+                </lightning-input-field>
+                    <lightning-button
+                        variant="brand"
+                        class="slds-align_absolute-center"
+                        type="submit"
+                        label="Create Pricebook"
+                        onclick ={pricebookhandleClick}>
+                    </lightning-button>
+            </lightning-record-edit-form>
+        </lightning-tab>
+        <lightning-tab label="PricebookEntry">
+            <lightning-record-edit-form object-api-name="PricebookEntry">
+                <lightning-input-field field-name="Product2Id" value={prodId}>
+                </lightning-input-field>
+                <lightning-input-field field-name="Pricebook2Id" value={pricebookId}>
+                </lightning-input-field>
+                <lightning-input-field field-name="UnitPrice">
+                </lightning-input-field>
+                    <lightning-button
+                        variant="brand"
+                        class="slds-align_absolute-center"
+                        type="submit"
+                        label="Create PricebookEntry"
+                        onclick ={pricebookEntryhandleSuccess}>
+                    </lightning-button>
+            </lightning-record-edit-form>
+        </lightning-tab>
+    </lightning-tabset>
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<template>    
+    <lightning-card >
+        <div style="position:relative;transform:translate(42%,-50%)">
+            <p style = "margin: 0 0 2rem 2rem; font-size: 1.4rem;font-family:'Times New Roman', Times, serif;font-weight:bolder">Contact Creation</p>
+        </div>
+        <div class = "slds-grid slds-wrap">
+                       <!-- Input for Account Name -->
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="text" label="Last Name" value={con2.LastName} onchange={handleChange}></lightning-input>
+            </div>
+    
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="email" label="Email" value={con2.Email} onchange={handleChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                <lightning-input type="text" label="Department" value={con2.Department} onchange={handleChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-5" style="margin:1rem 0px 0px 6rem">
+                 <lightning-input type="text" label="OtherPhone" value={con2.OtherPhone} onchange={handleChange}></lightning-input>
+            </div>
+
+            <div  class="slds-col slds-size_2-of-5" style="margin:3rem 0px 0px 74rem">
+                <button class= "slds-button slds-button_brand" style ="width:4rem" onclick ={pagehandlerpre}>Prev</button>
+            </div>
+
+            <div class="slds-col slds-size_2-of-5" style="margin:-2rem 0px 0px 80rem">
+                <button class= "slds-button slds-button_brand" style ="width:4rem" onclick ={pagehandlersubmit}>Submit</button>
+            </div> 
+        </div>
+    </lightning-card>
+</template>
