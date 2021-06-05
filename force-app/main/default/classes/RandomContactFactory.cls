@@ -6,5 +6,8 @@ public class RandomContactFactory {
             contactList.add(con);
         }
         return contactList;
+
     }
 }
+
+

@@ -3,6 +3,8 @@ public class ProductHandler3_Test {
     @testSetup static void setup() {
         Pricebook2 pbnew = new Pricebook2(id = test.getStandardPricebookId());
         update pbnew;
+
+        
         
         Product2 prod = new Product2(Name = 'Gandhiji Chasma', Description = 'aaannnsddee' , Family = 'pro');
         insert prod;

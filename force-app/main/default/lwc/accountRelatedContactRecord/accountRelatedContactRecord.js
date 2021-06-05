@@ -15,6 +15,7 @@ export default class AccountRelatedContactRecord extends NavigationMixin(Lightni
         Phone:'',
         NumberOfEmployees:''
     };
+    
     handleAccount(e){
         if(e.target.label === 'Name'){
             this.accRecord.Name = e.target.value;

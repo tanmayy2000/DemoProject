@@ -5,4 +5,4 @@ public with sharing class ProductHandlerStandardPricebook {
         String PricebookId = [SELECT Id FROM Pricebook2 WHERE IsStandard= true][0].Id;
         return PricebookId;
     }
-}
+}    
