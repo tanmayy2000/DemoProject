@@ -64,6 +64,7 @@ export default class AccountRelatedContactRecord extends NavigationMixin(Lightni
 
     addRow() {
         ++this.keyIndex;
+        // eslint-disable-next-line vars-on-top
         var newItem = [{ id: this.keyIndex }];
         this.itemList = this.itemList.concat(newItem);
     }
@@ -71,6 +72,7 @@ export default class AccountRelatedContactRecord extends NavigationMixin(Lightni
     removeRow(event) {
         if (this.itemList.length >= 2) {
             this.itemList = this.itemList.filter(function (element) {
+                // eslint-disable-next-line radix
                 return parseInt(element.id) !== parseInt(event.target.accessKey);
             });
         }
