@@ -85,7 +85,7 @@
                             <h2 class="slds-text-heading_medium slds-hyphenate" id="modal-heading-01">Selected Contacts Records</h2>
                         </header>
                         <!-- modal body start -->
-                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="slds-modal__content slds-var-p-around_medium " id="modal-content-id-1">
                             <template for:each={selectedCons} for:item="con">
                                 <dl class="slds-list_horizontal slds-wrap" if:true={con.Id} key={con.Id}>
                                     <dt class="slds-item_label slds-truncate" title="First Name">Contact Name:</dt>

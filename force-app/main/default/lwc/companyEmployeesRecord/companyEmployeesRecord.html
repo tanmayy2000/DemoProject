@@ -25,9 +25,9 @@
             </div>
           </div>
 
-          <lightning-layout-item >
+          <lightning-layout-item>
             <div class="slds-var-p-around_xx-small">
-              <div style="position:absolute;top:9rem;right:4rem">
+              <div style="position: absolute; top: 9rem; right: 4rem">
                 <lightning-input
                   type="search"
                   onchange={handleKeyChange}
@@ -97,56 +97,52 @@
             </template>
           </tbody>
         </table>
-        
+
         <lightning-layout>
-            <div style="position:absolute;bottom:1.5rem;left:3rem">
+          <div style="position: absolute; bottom: 1.5rem; left: 3rem">
             <lightning-layout-item padding="around-small">
-                
-                    Showing {startingRecord} to {endingRecord} out of
-                    {totalRecountCount} entries
-                 
-              </lightning-layout-item>
-            </div>
-              <div style="position:absolute;bottom:1.5rem;left:30rem">
-              <lightning-layout-item padding="around-small">      
-                    Pages: {page}/{totalPage}
-              </lightning-layout-item>
-            </div>
-            
-            <div style="position:absolute;bottom:1rem;right:21.5rem">
-          <lightning-layout-item
-            padding="around-small"
-          >
-            <lightning-button
-              label="<< First"
-              onclick={handleFirstPage}
-            ></lightning-button>
-          </lightning-layout-item>
-        </div>
-
-        <div style="position:absolute;bottom:1rem;right:14.5rem">
-          <lightning-layout-item padding="around-small">
-            <lightning-button label="< Previous" onclick={previousHandler}>
-            </lightning-button>
-          </lightning-layout-item>
+              Showing {startingRecord} to {endingRecord} out of
+              {totalRecountCount} entries
+            </lightning-layout-item>
+          </div>
+          <div style="position: absolute; bottom: 1.5rem; left: 30rem">
+            <lightning-layout-item padding="around-small">
+              Pages: {page}/{totalPage}
+            </lightning-layout-item>
           </div>
 
-          <div style="position:absolute;bottom:1rem;right:9rem">
-          <lightning-layout-item padding="around-small">
-            <lightning-button
-              label="Next >"
-              onclick={nextHandler}
-            ></lightning-button>
-          </lightning-layout-item>
+          <div style="position: absolute; bottom: 1rem; right: 21.5rem">
+            <lightning-layout-item padding="around-small">
+              <lightning-button
+                label="<< First"
+                onclick={handleFirstPage}
+              ></lightning-button>
+            </lightning-layout-item>
           </div>
 
-          <div style="position:absolute;bottom:1rem;right:3rem">
-          <lightning-layout-item padding="around-small">
-            <lightning-button
-              label="Last >>"
-              onclick={handleLastPage}
-            ></lightning-button>
-          </lightning-layout-item>
+          <div style="position: absolute; bottom: 1rem; right: 14.5rem">
+            <lightning-layout-item padding="around-small">
+              <lightning-button label="< Previous" onclick={previousHandler}>
+              </lightning-button>
+            </lightning-layout-item>
+          </div>
+
+          <div style="position: absolute; bottom: 1rem; right: 9rem">
+            <lightning-layout-item padding="around-small">
+              <lightning-button
+                label="Next >"
+                onclick={nextHandler}
+              ></lightning-button>
+            </lightning-layout-item>
+          </div>
+
+          <div style="position: absolute; bottom: 1rem; right: 3rem">
+            <lightning-layout-item padding="around-small">
+              <lightning-button
+                label="Last >>"
+                onclick={handleLastPage}
+              ></lightning-button>
+            </lightning-layout-item>
           </div>
         </lightning-layout>
       </div>

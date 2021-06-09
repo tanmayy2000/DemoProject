@@ -13,7 +13,7 @@ export default class CustomDataTable extends LightningElement {
     // opening the modal
     openModal() { this.bShowModal = true; }
     // closeing the modal
-    closeModal() { this.bShowModal = false;}
+    closeModal() { this.bShowModal = false; }
 
     // Getting Contacts using Wire Service
     @wire(retriveCons)
@@ -31,9 +31,9 @@ export default class CustomDataTable extends LightningElement {
     // Select the all rows
     allSelected(event) {
         let selectedRows = this.template.querySelectorAll('lightning-input');
-        
-        for(let i = 0; i < selectedRows.length; i++) {
-            if(selectedRows[i].type === 'checkbox') {
+
+        for (let i = 0; i < selectedRows.length; i++) {
+            if (selectedRows[i].type === 'checkbox') {
                 selectedRows[i].checked = event.target.checked;
             }
         }
@@ -47,8 +47,8 @@ export default class CustomDataTable extends LightningElement {
         let selectedRows = this.template.querySelectorAll('lightning-input');
 
         // based on selected row getting values of the contact
-        for(let i = 0; i < selectedRows.length; i++) {
-            if(selectedRows[i].checked && selectedRows[i].type === 'checkbox') {
+        for (let i = 0; i < selectedRows.length; i++) {
+            if (selectedRows[i].checked && selectedRows[i].type === 'checkbox') {
                 this.selectedCons.push({
                     Name: selectedRows[i].value,
                     Id: selectedRows[i].dataset.id
