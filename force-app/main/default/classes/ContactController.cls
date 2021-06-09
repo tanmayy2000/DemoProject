@@ -7,10 +7,10 @@ public with sharing class ContactController {
          upsert con;
          return con;
     }
-    @AuraEnabled
+    @AuraEnabled (cacheable=true)
     public static List<Contact> getContacts()
     {
-        return [Select Account.Name,FirstName,LastName,Email From Contact];
+        return [Select Account.Name,Name,FirstName,LastName,Phone,Email From Contact];
     }
 
     @AuraEnabled

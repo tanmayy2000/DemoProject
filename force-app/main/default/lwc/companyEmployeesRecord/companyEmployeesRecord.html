@@ -1,0 +1,70 @@
+<template>
+    <lightning-card > 
+        
+        <div class="slds-text-align_center" style="padding:0.5rem;background:#dde5f0">
+            <div class="slds-text-heading_large slds-border_bottom">Employee Records</div>
+            </div>
+        <lightning-layout>
+           
+            <div class="slds-p-around_x-small">
+                <div class="slds-float_left">
+            <lightning-combobox value={pageSize} onchange={handleChangePageSize} placeholder="Select page size" label="Size"
+            options={options}>
+            </lightning-combobox>
+            </div>
+        </div>
+        
+        
+                <lightning-layout-item size="10"> 
+                    <div class="slds-p-around_xx-small">
+            <div class="slds-float_right">
+            
+            <lightning-input type="search" onchange={handleKeyChange}  label="Search"
+            value={searchKey} ></lightning-input>
+        </div>
+        </div>
+        </lightning-layout-item>
+        </lightning-layout>        
+        
+        <br>
+        <div class="slds-p-around_xx-small">
+
+       <div style="width: auto;">
+           <template if:true={data}>
+
+               <lightning-datatable data={data}
+                                    columns={columns}
+                                    key-field="id"
+                                    ></lightning-datatable>
+           </template>
+       </div>
+    </div>
+    </br>
+    <div class="slds-p-around_xx-small">
+    <div class="slds-float_left">
+        Showning {startingRecord} to {endingRecord} of {totalRecountCount}
+        Page {page} 
+    </div>
+</div>
+    <div class="slds-p-around_xx-small">
+    <div class="slds-text-align_right">
+    
+            <lightning-button label="<< First"
+                onclick={handleFirstPage}></lightning-button>
+        
+            <lightning-button label="< Previous"  onclick={previousHandler}>
+            </lightning-button>
+        
+       
+        <lightning-button label="Next >" 
+            onclick={nextHandler}></lightning-button>
+  
+    
+    
+        <lightning-button label="Last >>"  
+            onclick={handleLastPage}></lightning-button>
+    </div>
+</div>
+   
+   </lightning-card>   
+</template>
