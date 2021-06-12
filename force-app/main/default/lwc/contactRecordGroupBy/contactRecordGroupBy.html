@@ -1,12 +1,12 @@
 <template>
     <lightning-card title="Contact List">
         <template if:true={contacts.data}>
-            <lightning-datatable
+           <!-- <lightning-datatable
                 key-field="Id"
                 data={contacts.data}
                 columns={columns}
             >
-           </lightning-datatable>
+           </lightning-datatable> -->
         </template>
         <div style="display:flow-root;">
             <div style="float:right">
@@ -21,9 +21,9 @@
         </div>
         <br>
         <template if:true={columns}>
-            <lightning-datatable key-field="Id" data={data} columns={columns} sorted-by={sortedBy}
+           <!-- <lightning-datatable key-field="Id" data={data} columns={columns} sorted-by={sortedBy}
                 sorted-direction={sortedDirection} onsort={sortColumns}>
-            </lightning-datatable>
+            </lightning-datatable> -->
 
             <lightning-layout horizontal-align="space">
                 <lightning-layout-item flexibility="auto">

@@ -26,11 +26,11 @@
        <div style="width: auto;">
            <template if:true={data}>
 
-               <lightning-datatable data={data}
+           <!--    <lightning-datatable data={data}
                                     columns={columns}
                                     key-field="id"
                                     hide-checkbox-column="true"
-                                    onrowaction={handleRowActions}></lightning-datatable>
+                                    onrowaction={handleRowActions}></lightning-datatable> -->
            </template>
 
        </div>
@@ -58,7 +58,7 @@
                    <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate" if:true={isEditForm}>Update Record Values</h2>
                </header>
                <!-- modal body -->
-               <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" if:false={isEditForm}>
+               <div class="slds-modal__content slds-var-p-around_medium" id="modal-content-id-1" if:false={isEditForm}>
                    <dl class="slds-list_horizontal slds-wrap">
                        <dt class="slds-item_label slds-truncate" title="First Name">First Name:</dt>
                        <dd class="slds-item_detail slds-truncate">{record.FirstName}</dd>
@@ -82,7 +82,7 @@
                        <lightning-input-field field-name="Phone"></lightning-input-field><br/>
                        
                        <div style="text-align:center;">
-                           <lightning-button class="slds-m-top_small"
+                           <lightning-button class="slds-var-m-top_small"
                                              variant="brand"
                                              type="submit"
                                              name="update"
