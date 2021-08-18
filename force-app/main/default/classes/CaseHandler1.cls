@@ -10,7 +10,7 @@ public class CaseHandler1 {
             cs.ContactId = c.id;
             cseList.add(cs);
         }
-        
+        System.debug(cseList);
         return database.insert(cseList,false);
         
     }
