@@ -11,6 +11,7 @@ public with sharing class AccountController {
     @AuraEnabled
     public static Boolean deleteAccount(String acc) {
         Account a = [select id,Name from Account where id =: acc];
+        System.debug(a);
         delete a;
         return true;
     }

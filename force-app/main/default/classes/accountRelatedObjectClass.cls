@@ -15,6 +15,7 @@ public with sharing class accountRelatedObjectClass {
                 coWrapperList.add(conOppWrapper);
             }
         }
+        System.debug(coWrapperList);
         return coWrapperList;
 
     }

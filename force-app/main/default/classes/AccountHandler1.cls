@@ -12,6 +12,7 @@ public class AccountHandler1 {
             acc.Site = 'Google';
             accList.add(acc);
         }
+        System.debug(accList);
         
         return Database.insert(accList,false);
     }
